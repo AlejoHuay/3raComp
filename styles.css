@@ -32,7 +32,7 @@ body{
     height: 35px;
 }
 .caja-logo p{
-    color: #dadacf; 
+    color: #dadada; 
     font-size:23px;
     margin-left: 1%;
     font-family:'Comic Neue';
@@ -62,7 +62,7 @@ nav a{
 
     font-size:20px;
     font-family:'Comic Neue'; 
-    color: #dadacf;
+    color: #dadada;
 
     height: 100%;
 
@@ -76,13 +76,13 @@ nav a{
     transition: color 0.3s ease;  
 }
 nav a:hover {
-    color: #FAAB34;  
+    color: #ff640a;  
     background-color:#141519;           
   }
 .contenido{
     flex-basis: 91vh;
-    flex-grow: 1;
-    flex-shrink: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
     background-color: #000000; 
 }
 .caja-carrusel{
@@ -102,12 +102,30 @@ nav a:hover {
     width: 100%;
     height: 100%;
 }
+/*.tom{
+    width: 100%;
+    height: 100%;
+}
+.jhonny{
+    width: 100%;
+    height: 100%;
+}
+.dexter{
+    width: 100%;
+    height: 100%;
+}*/
 @media screen and (max-width: 480px){
+        /*height: auto; 
+        object-fit: contain;
+        display: block;*/
     .corraje{
-        height: auto;
-    object-fit: contain;
-    display: block;
+        object-fit: cover;
+        object-position: left center;
     }
+    /*.tom{
+        object-fit: cover;
+        object-position: center;
+    }*/
 }
 .fin-contenido{
     display: flex;
@@ -140,14 +158,14 @@ nav a:hover {
 .caja-ir-catalogo p{
     margin: 0px;
     font-family:'Comic Neue'; /*verificar con cursive*/
-    color: #dadacf;
+    color: #ffffff;
     font-size:20px;
     font-weight: bold;
 }
 .caja-ir-catalogo .parrafo-naranja{
     margin: 0px;
     font-family:'Comic Neue'; /*verificar con cursive*/
-    color: #FAAB34;
+    color: #ff640a;
     font-size:20px;
     font-weight: bold;
 }
@@ -157,7 +175,9 @@ nav a:hover {
     flex-wrap: nowrap; 
     
     height: 70vh; 
-    background-color: #23252b;
+    background: linear-gradient(to top, #203843 0%, #000000 100%);
+    color: #a0a0a0;
+    font-family:'Comic Neue';
 }
 @media screen and (max-width: 480px){
     .footer{
@@ -169,15 +189,16 @@ nav a:hover {
     flex-direction: row;
     flex-wrap: nowrap;
 
-    height: 50%;
+    height: 50%; /**/
     width: 100%;
 
     justify-content: center;
     align-items: center;
-    background-color: red;
+    /*background-color: red;*/
 }
 @media screen and (max-width: 480px){
     .pre-footer{
+        height: 70%; /**/
         justify-content: flex-start;
         flex-direction: column;
         align-items: flex-start;
@@ -187,28 +208,28 @@ nav a:hover {
     flex-basis: 20%;
     flex-grow: 0;
     flex-shrink: 0;
-    background-color: #FAAB34;
+    /*background-color: #FAAB34;*/
     height: 80%;
 }
 .pre-footer .caja-nosotros{
     flex-basis: 20%;
     flex-grow: 0;
     flex-shrink: 0;
-    background-color: purple;
+    /*background-color: purple;*/
     height: 80%;
 }
 .pre-footer .caja-RetroTv{
     flex-basis: 20%;
     flex-grow: 0;
     flex-shrink: 0;
-    background-color: greenyellow;
+    /*background-color: greenyellow;*/
     height: 80%;
 }
 .pre-footer .caja-cuenta{
     flex-basis: 20%;
     flex-grow: 0;
     flex-shrink: 0;
-    background-color: pink;
+    /*background-color: pink;*/
     height: 80%;
 }
 @media screen and (max-width: 480px){
@@ -229,15 +250,34 @@ nav a:hover {
         width: 100%;
     }
 }
+.linea-footer {
+  border: 1px solid #4a4e58;
+  opacity: 1;
+  margin: 0 0%;
+}
 .titulo-footer{
-    flex-basis: 15%;
+    align-content: center;
+    flex-basis: 20%;
     flex-grow: 0;
     flex-shrink: 0;
-    background-color: blue;
+    padding-left: 13.3%;
+    padding-right: 13.3%;
+    /*background-color: blue;*/
+}
+.titulo-footer p{
+    margin-top: 3.5%;
+    margin-bottom: 3.5%;
 }
 @media screen and (max-width: 480px){
     .titulo-footer{
-        flex-basis: 7%;
+        align-content: center;
+        padding-left: 4.3%;
+        padding-right: 4.3%;
+        flex-basis: 10%;
+    }
+    .titulo-footer p{
+        margin-top: 13%;
+        margin-bottom: 13%;
     }
 }
 .parrafos-footer{
@@ -245,31 +285,38 @@ nav a:hover {
     flex-direction: row;
     flex-wrap: nowrap; 
     
-    height: 35%; 
+    height: 30%; 
     width: 100%;
-
-    background-color: yellow;
+    font-size: 15px;
+    /*background-color: yellow;*/
     justify-content: center;
 }
 @media screen and (max-width: 480px){
     .parrafos-footer{
         flex-direction: column;
-        height: 43%; 
+        height: 20%; /*43*/
+        font-size: 16px;
     }
 }
 .parrafos-footer .caja-footer-1{
     flex-basis: 40%;
     flex-grow: 0;
     flex-shrink: 0;
-    background-color: #FAAB34;
     height: 80%;
 }
 .parrafos-footer .caja-footer-2{
     flex-basis: 40%;
     flex-grow: 0;
     flex-shrink: 0;
-    background-color: black;
     height: 80%;
+}
+.parrafos-footer .p1-footer-1{
+    padding-left: 8%;
+    padding-right: 1%;
+}
+.parrafos-footer .p2-footer-2{
+    padding-left: 1%;
+    padding-right: 8%;
 }
 @media screen and (max-width: 480px){
     .parrafos-footer .caja-footer-1{
@@ -278,29 +325,12 @@ nav a:hover {
     .parrafos-footer .caja-footer-2{
         flex-basis: 50%;
     }
+    .parrafos-footer .p1-footer-1{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    .parrafos-footer .p2-footer-2{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.tom{
-    width: 100%;
-    height: 100%;
-}
-.jhonny{
-    width: 100%;
-    height: 100%;
-}
-.dexter{
-    width: 100%;
-    height: 30%;
-}*/
