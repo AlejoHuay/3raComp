@@ -135,13 +135,18 @@ body{
     height: 500vh;
 }
 
+@media screen and (max-width: 480px){ /*defenza*/
+    .contenido{
+        height: 1500vh;
+    }
+}
 
 
 
 
 
 
-.caja-carrusel{
+.contenido .caja-carrusel{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column; 
@@ -150,11 +155,11 @@ body{
     height: 20%;
 }
 @media screen and (max-width: 480px){
-    .caja-carrusel{
+    .contenido .caja-carrusel{
         height: 18%;
     }
 }
-.corraje{
+.caja-carrusel .corraje{
     flex-basis: 100%;
     flex-grow: 0;
     flex-shrink: 0;
@@ -163,7 +168,7 @@ body{
     height: 100%;
 }
 @media screen and (max-width: 480px){
-    .corraje{
+    .caja-carrusel .corraje{
         object-fit: cover;
         object-position: left center;
     }
@@ -223,7 +228,7 @@ body{
 
 
 
-.contenido .caja-seccion{
+/*.contenido .caja-seccion{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -232,17 +237,28 @@ body{
     height: 11%;
     width: 100%;
 
-    overflow-x:auto; /*chat*/
-    scroll-snap-type: x mandatory; /*chat*/
+    overflow-x:auto;
+    scroll-snap-type: x mandatory; 
+}*/
+.contenido .caja-seccion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: space-around;
+    height: 11%;
+    width: 100%;
 }
+/*@media screen and (max-width: 480px){
+    .contenido .caja-seccion{
+        height: 8.5%; 
+    }
+}*/
 @media screen and (max-width: 480px){
     .contenido .caja-seccion{
-        height: 8.5%; /*si da problemas se puede quitar*/
-
-        /*background-color: blue;
-        padding-left: 3.5%;
-        padding-right: 3.5%;
-        box-sizing: border-box;*/
+        flex-direction: column;
+        height: 25.5%; 
+        align-items: center;
     }
 }
 .caja-seccion .caja-imagen{
@@ -253,7 +269,7 @@ body{
     width: 17.5%;
     height: 100%;
 }
-@media screen and (max-width: 480px){
+/*@media screen and (max-width: 480px){
     .caja-seccion .caja-imagen{
         min-width: 30%; 
         padding-left: 1.5%;
@@ -262,6 +278,13 @@ body{
     }
     .contenido .caja-seccion::-webkit-scrollbar { 
         display: none;
+    }
+}*/
+@media screen and (max-width: 480px){
+    .caja-seccion .caja-imagen{ 
+        width: 57.5%;
+        padding-left: 1.5%;
+        padding-right: 1.5%;
     }
 }
 .caja-imagen .caja-portada{
@@ -296,7 +319,7 @@ body{
 
     margin-bottom: 0%;
     color: #fff;
-    font-size: 1rem;      /* 16px */
+    font-size: 1rem;      
 }
 .titulo-portada .detalles{
     flex-basis: 30%;
@@ -305,7 +328,7 @@ body{
 
     margin-top: 0%;
     color: #a0a0a0;
-    font-size: 0.9375rem; /* 15px */
+    font-size: 0.9375rem; 
 }
 
 
@@ -433,7 +456,7 @@ body{
         flex-basis: 5.5%;
     }
     .anuncio .banner{
-        height: 70%;
+        height: 40%; /*70*/
     }
 }
 
